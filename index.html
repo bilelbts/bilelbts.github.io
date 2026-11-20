@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilal Hadjersi, développeur web full-stack</title>
+  <meta name="description" content="Portfolio de Bilal Hadjersi, développeur web full-stack (React, Node.js, Python, PostgreSQL), à la recherche d'une alternance pour 2026-2027.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="nav">
+    <a class="logo mono" href="#top">~/bilal<span class="caret">_</span></a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#experience">Expérience</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#stack">Compétences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button">Mode clair</button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <h1>Bilal<br>Hadjersi<span class="accent">.</span></h1>
+      <p class="hero-role">Développeur web full-stack (React, Node.js, Python)</p>
+      <p class="hero-sub">Je développe des applications web et j'automatise des processus métier. En alternance, j'ai travaillé sur une plateforme de réservation, des synchronisations entre CRM et bases de données, et des scripts qui alimentent automatiquement des applications React.</p>
+      <p class="availability">Je cherche une alternance pour 2026-2027, en Île-de-France.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#experience">Voir mon travail</a>
+        <a class="btn btn-ghost" href="#contact">Me contacter</a>
+      </div>
+    </section>
+
+    <section class="section" id="apropos">
+      <h2>À propos</h2>
+      <div class="about">
+        <p>Après un BTS Systèmes Numériques (option Informatique et Réseaux), je me suis tourné vers le développement web avec un Bachelor Développeur Full Stack à Cloud Campus. Ma première année en alternance chez Oser le Changement m'a appris à travailler sur du code utilisé tous les jours, à faire communiquer des outils entre eux et à automatiser ce qui faisait perdre du temps à l'équipe.</p>
+        <p>En ce moment, je construis <strong>Penquest</strong>, mon projet de fin d'études. C'est une plateforme francophone où des auteurs publient leurs fictions chapitre par chapitre, et où les lecteurs peuvent les soutenir par des dons, un abonnement ou l'achat d'e-books. Je le mène seul, de la conception jusqu'à la mise en ligne.</p>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>En entreprise</h2>
+      <p class="section-intro">Alternance chez <strong>Oser le Changement</strong> de septembre 2025 à août 2026. Le code appartient à l'entreprise et reste privé, donc je décris ici le besoin, ce que j'ai fait et les outils utilisés.</p>
+
+      <div class="missions">
+        <article class="mission mission-feature">
+          <p class="card-top"><span>Full-stack</span><span class="tag-private">Code privé</span></p>
+          <h3>Plateforme de réservation de rendez-vous</h3>
+          <p>Une application où l'utilisateur voit les disponibilités en temps réel, choisit un lieu, un praticien et un créneau, puis confirme son rendez-vous.</p>
+          <ul class="facts">
+            <li>Calendrier interactif en React alimenté par l'API Acuity Scheduling</li>
+            <li>Filtrage des créneaux par lieu, praticien et type de rendez-vous</li>
+            <li>Vérification de la disponibilité juste avant de créer le rendez-vous</li>
+            <li>Suivi des réservations dans Firebase Firestore</li>
+            <li>Suivi de la provenance des visiteurs jusqu'à la réservation</li>
+          </ul>
+          <p class="note"><strong>Ce qui m'a le plus occupé :</strong> les fuseaux horaires. Les créneaux devaient toujours s'afficher à l'heure de Paris, et le calendrier ne devait plus proposer des jours où il n'y avait en fait aucun créneau libre.</p>
+          <p class="stack">React, Node.js, Express, Firestore, API Acuity, Axios, Make</p>
+        </article>
+
+        <article class="mission">
+          <p class="card-top"><span>Données et back-end</span><span class="tag-private">Code privé</span></p>
+          <h3>Suivi des certifications Qualiopi</h3>
+          <p>Un script Python qui compare les données publiques de la DGEFP (environ 148 000 SIRET) avec notre base, calcule un statut pour chaque organisme de formation et met à jour le CRM.</p>
+          <ul class="facts">
+            <li>5 statuts métier avec leurs règles de passage</li>
+            <li>Synchronisation avec Brevo et PostgreSQL, par lots</li>
+            <li>Rapport CSV des changements et des erreurs à chaque passage</li>
+          </ul>
+          <p class="stack">Python, PostgreSQL, API Brevo, API Google Drive, Railway</p>
+        </article>
+
+        <article class="mission">
+          <p class="card-top"><span>Automatisation</span><span class="tag-private">Code privé</span></p>
+          <h3>Des Google Sheets à l'application React</h3>
+          <p>L'équipe gère les lieux, praticiens, tarifs et calendriers dans Google Sheets. Mes scripts transforment ces feuilles en fichiers JS et JSON utilisés par l'application de réservation, vérifient les champs obligatoires, puis font le commit, le push et le build.</p>
+          <ul class="facts">
+            <li>Suivi de l'exécution et des erreurs</li>
+          </ul>
+          <p class="stack">Python, gspread, GitPython, Bitbucket, Node.js</p>
+        </article>
+
+        <article class="mission">
+          <p class="card-top"><span>Back-end et CRM</span><span class="tag-private">Code privé</span></p>
+          <h3>Synchronisation Freshsales vers PostgreSQL</h3>
+          <p>Un service qui récupère les contacts du CRM Freshsales, les range dans PostgreSQL et les met à disposition via une API REST (<code>/api/contacts</code>, avec pagination et filtres).</p>
+          <p class="stack">Python, Flask, PostgreSQL, API Freshsales</p>
+        </article>
+
+        <article class="mission">
+          <p class="card-top"><span>WordPress</span><span class="tag-private">Code privé</span></p>
+          <h3>Formulaires, suivi et dates automatiques sur WordPress</h3>
+          <p>Les dates des sessions affichées sur le site se mettent à jour toutes seules depuis Google Sheets. J'ai aussi mis en place le suivi de l'origine des visiteurs jusqu'au formulaire de contact, avec Contact Form 7 et reCAPTCHA.</p>
+          <p class="stack">WordPress, PHP, JavaScript, FastAPI, API Google Sheets</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TODO ajouter des captures des projets -->
+    <section class="section" id="projets">
+      <div class="section-head">
+        <h2>Projets</h2>
+        <p class="filters" role="group" aria-label="Filtrer les projets">
+          <button class="chip active" data-filter="all" type="button">Tous</button>
+          <button class="chip" data-filter="web" type="button">Web</button>
+          <button class="chip" data-filter="mobile" type="button">Mobile</button>
+          <button class="chip" data-filter="backend" type="button">Back-end</button>
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card card-feature" data-cat="web">
+          <p class="card-top"><span>Projet d'école</span><span class="tag-live">En ligne</span></p>
+          <h3>CommunityHub</h3>
+          <p>Le front-end d'une plateforme communautaire d'événements, branché sur une API REST : comptes utilisateurs, catégories, création d'événements gratuits ou payants, en présentiel ou à distance.</p>
+          <ul class="facts">
+            <li>Connexion et état de l'utilisateur gérés avec Redux Toolkit</li>
+            <li>Pages protégées et rôle administrateur</li>
+            <li>Formulaire de création d'événement avec contrôle des dates</li>
+            <li>Messages de chargement, de succès et d'erreur pour chaque appel à l'API</li>
+          </ul>
+          <p class="stack">React 19, Redux Toolkit, React Router, React Hook Form, Bootstrap, Vite</p>
+          <p class="links">
+            <a href="https://communityhub-bilal.vercel.app" target="_blank" rel="noopener">Voir la démo</a>
+            <a href="https://github.com/bilelbts/communityhub_bilal" target="_blank" rel="noopener">Voir le code</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="backend">
+          <p class="card-top"><span>Projet perso</span><span>Raspberry Pi</span></p>
+          <h3>Assistant vocal domotique</h3>
+          <p>Un assistant vocal en Python sur Raspberry Pi. On lui parle et il donne la météo, l'heure, la température de la pièce, ou il ouvre et ferme les volets. Les données sont stockées dans MySQL.</p>
+          <p class="stack">Python, Raspberry Pi, reconnaissance vocale, API, MySQL</p>
+          <p class="links">
+            <a href="https://github.com/bilelbts/serveur-vocal" target="_blank" rel="noopener">Voir le code</a>
+          </p>
+        </article>
+
+        <article class="card card-feature" data-cat="web">
+          <p class="card-top"><span>Projet d'école</span><span class="tag-live">En ligne</span></p>
+          <h3>Voyage</h3>
+          <p>Un site pour découvrir des destinations : catalogue, page de détail, recherche, connexion et pages privées. Huit pages en tout, avec React Router, et des formulaires validés par React Hook Form et Yup.</p>
+          <p class="stack">React, React Router, React Hook Form, Yup, Context API, Bootstrap</p>
+          <p class="links">
+            <a href="https://voyage-redux-ml1a.vercel.app" target="_blank" rel="noopener">Voir la démo</a>
+            <a href="https://github.com/bilelbts/Voyage_redux" target="_blank" rel="noopener">Voir le code</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="backend">
+          <p class="card-top"><span>Projet d'école</span><span>PHP</span></p>
+          <h3>Site de recettes</h3>
+          <p>Un site en PHP où chacun crée son compte pour publier, modifier ou supprimer ses recettes, avec des photos. Les données sont en MySQL, via PDO.</p>
+          <p class="stack">PHP, MySQL, PDO, sessions</p>
+          <p class="links">
+            <a href="https://github.com/bilelbts/programme_PHP" target="_blank" rel="noopener">Voir le code</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="mobile">
+          <p class="card-top"><span>Projet d'école</span><span>Mobile</span></p>
+          <h3>Plus ou Moins</h3>
+          <p>Un petit jeu mobile : le nombre caché est-il plus grand ou plus petit que celui affiché ? Mon premier projet en React Native, avec trois écrans.</p>
+          <p class="stack">React Native, Expo, TypeScript, React Navigation</p>
+          <p class="links">
+            <a href="https://github.com/bilelbts/react-native-jeux" target="_blank" rel="noopener">Voir le code</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="backend">
+          <p class="card-top"><span>Projet perso</span><span>C++</span></p>
+          <h3>Cardgame</h3>
+          <p>Un jeu de combat au tour par tour avec des personnages qui progressent, des objets et des stats de vitesse, d'attaque et de défense. Les profils des joueurs sont sauvegardés dans MySQL.</p>
+          <p class="stack">C++, MySQL</p>
+          <p class="links">
+            <a href="https://github.com/bilelbts/programme-c--" target="_blank" rel="noopener">Voir le code</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="web">
+          <p class="card-top"><span>Projet d'école</span><span>Web</span></p>
+          <h3>Universe</h3>
+          <p>Une page sur Star Wars en JavaScript qui interroge une API publique et affiche le nombre de personnages, de vaisseaux et de planètes.</p>
+          <p class="stack">JavaScript, Fetch, HTML, CSS</p>
+          <p class="links">
+            <a href="https://github.com/bilelbts/site_space_js" target="_blank" rel="noopener">Voir le code</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="parcours">
+      <h2>Parcours</h2>
+      <ol class="timeline">
+        <li>
+          <span class="when">2025 - 2027</span>
+          <div>
+            <h3>Bachelor Développeur Full Stack</h3>
+            <p class="where">Cloud Campus, en alternance</p>
+            <p>Bac+3/+4. Je cherche une entreprise d'accueil pour la deuxième année (2026-2027), avec l'objectif de poursuivre en master.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">Sept. 2025 - août 2026</span>
+          <div>
+            <h3>Développeur web en alternance</h3>
+            <p class="where">Oser le Changement</p>
+            <p>Plateforme de réservation, synchronisations entre CRM et bases de données, automatisation des mises à jour des applications et du site WordPress.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2022 - 2024</span>
+          <div>
+            <h3>BTS Systèmes Numériques</h3>
+            <p class="where">Lycée Le Corbusier</p>
+            <p>Option Informatique et Réseaux.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">Mai - juillet 2022</span>
+          <div>
+            <h3>Stage de technicien informatique</h3>
+            <p>Maintenance du parc, tickets utilisateurs, réseau et inventaire du matériel.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="stack">
+      <h2>Compétences</h2>
+      <div class="stack-grid">
+        <div class="stack-col">
+          <h3>Front-end</h3>
+          <ul><li>React</li><li>Redux Toolkit</li><li>React Router</li><li>JavaScript</li><li>HTML / CSS</li><li>Bootstrap</li></ul>
+        </div>
+        <div class="stack-col">
+          <h3>Back-end</h3>
+          <ul><li>Node.js / Express</li><li>Python</li><li>Flask / FastAPI</li><li>PHP</li><li>API REST, JWT</li></ul>
+        </div>
+        <div class="stack-col">
+          <h3>Données</h3>
+          <ul><li>PostgreSQL</li><li>MySQL</li><li>Firestore</li><li>SQL</li></ul>
+        </div>
+        <div class="stack-col">
+          <h3>Outils et intégrations</h3>
+          <ul><li>Git, GitHub, Bitbucket</li><li>Make, n8n</li><li>WordPress</li><li>Vercel, Railway</li><li>API Google, Brevo, Freshsales</li></ul>
+        </div>
+      </div>
+      <p class="learning"><strong>Ce que j'apprends en ce moment, avec Penquest :</strong> Next.js, TypeScript, NestJS, Prisma, Stripe, Docker et GitHub Actions.</p>
+    </section>
+
+    <section class="section contact" id="contact">
+      <h2>Contact</h2>
+      <p class="contact-lead">Une alternance, un projet ou une question ? Écrivez-moi.</p>
+      <a class="big-mail" href="mailto:hadjersiibilel@gmail.com">hadjersiibilel@gmail.com</a>
+      <ul class="socials">
+        <li><a href="https://github.com/bilelbts" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/bilal-hadjersi-1213aa2b3" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year">2026</span> Bilal Hadjersi</span>
+    <span>Bobigny</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
